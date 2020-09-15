@@ -30,7 +30,8 @@
 export default {
   methods: {
     openPost() {
-      console.log("object");
+      const id = "test-id";
+      this.$router.push(`/post/${id}`);
     }
   }
 };
@@ -41,23 +42,20 @@ export default {
   min-height: 100px;
   margin-bottom: 1rem;
   padding: 0;
-}
-
-.post-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.post-img {
-  width: 100%;
-  height: auto;
-}
-.post-body {
-}
-.post-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem;
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-img {
+    width: 100%;
+    height: auto;
+  }
+  &-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+  }
 }
 </style>
