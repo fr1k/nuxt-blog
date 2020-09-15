@@ -18,7 +18,10 @@
         </small>
       </div>
       <div class="post-header-img">
-        <img src="https://i.imgur.com/sxm2DYp.jpg" alt="post img" />
+        <img
+          src="https://randomwordgenerator.com/img/picture-generator/53e0dd404856ab14f1dc8460962e33791c3ad6e04e507441722678d19549c4_640.jpg"
+          alt="post img"
+        />
       </div>
     </header>
     <main class="post-content">
@@ -34,7 +37,13 @@
         animi itaque eligendi vel sequi consequuntur! Corrupti dolorum ipsa cum!
       </p>
     </main>
-    <footer></footer>
+    <footer>
+      <CommentForm @created="createCommetHandler" v-if="isAddComment" />
+      <div class="comments" v-if="true">
+        <Comment v-for="comment in 4" :key="comment" :comment="comment" />
+      </div>
+      <div class="text-center" v-else>No comments</div>
+    </footer>
   </article>
 </template>
 
@@ -42,6 +51,16 @@
 export default {
   validate({ params }) {
     return !!params.id;
+  },
+  data() {
+    return {
+      isAddComment: true
+    };
+  },
+  methods: {
+    createCommetHandler() {
+      this.isAddComment = false;
+    }
   }
 };
 </script>

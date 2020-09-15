@@ -9,7 +9,7 @@
     </header>
     <div class="post-body">
       <img
-        src="https://i.imgur.com/sxm2DYp.jpg"
+        src="https://randomwordgenerator.com/img/picture-generator/53e0dd404856ab14f1dc8460962e33791c3ad6e04e507441722678d19549c4_640.jpg"
         alt="post img"
         class="post-img"
       />
