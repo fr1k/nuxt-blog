@@ -17,7 +17,7 @@ export const actions = {
       const token = await new Promise((resolve, reject) => {
         setTimeout(() => {
           resolve("mock-token");
-        }, 2000);
+        }, 1000);
       });
     } catch (error) {
       commit("setError", error, { root: true });

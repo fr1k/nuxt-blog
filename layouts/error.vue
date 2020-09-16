@@ -22,6 +22,7 @@ export default {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: 5rem;
   &-content {
     display: flex;
     flex-direction: column;
