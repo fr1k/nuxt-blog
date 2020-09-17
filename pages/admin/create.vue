@@ -27,6 +27,7 @@
         <el-dialog title="Preview" :visible.sync="isPreviewDialog">
           <div :key="control.text">
             <vue-markdown>{{ control.text }}</vue-markdown>
+            <!-- {{ control.text }} -->
           </div>
         </el-dialog>
       </el-form-item>
