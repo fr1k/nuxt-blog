@@ -14,17 +14,13 @@ export const mutations = {
 export const actions = {
   async login({ commit, dispatch, formData }) {
     try {
-      const token = await new Promise((resolve, reject) => {
-        setTimeout(() => {
-          resolve("mock-token");
-        }, 1000);
-      });
+      const { token } = this.$axios.$post("/api/auth/admin/login", formData);
+      console.log("token", token);
+      dispatch("setToken", token);
     } catch (error) {
       commit("setError", error, { root: true });
       throw error;
     }
-
-    dispatch("setToken", token);
   },
   async createUser({ commit }, formData) {
     try {
@@ -40,5 +36,5 @@ export const actions = {
 };
 
 export const getters = {
-  isAuthenticated: state => !!state.token
+  isAuthenticated: state => Boolean(state.token)
 };
